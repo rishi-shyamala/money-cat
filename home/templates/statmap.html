@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href=/static/favicon.ico>
+    <style>
+    .divider{
+      width:30px;
+      height:auto;
+      display:inline-block;
+   }
+   body{
+      margin: 0;
+      background-image: url(/static/background.png);
+      background-size: 1920px 1080px;
+      background-repeat:no-repeat;
+   }
+    h1 {text-align: center;}
+    p {text-align: center;}
+    button{margin:0 auto; text-align: center;}
+    row{margin:0 auto; text-align: center;}
+    </style>
+    <!--<script>
+    function PrintJson() {
+      var BigParserAccountEmail = "2019chartzel@tjhsst.edu"
+      var BigParserAccountPassword = "F)0lish99"
+      var endpoint = "https://www.bigparser.com/APIServices/api/common/login"
+    var options = JSON.stringify({
+      "emailId": BigParserAccountEmail,
+      "password": BigParserAccountPassword,
+      "loggedIn": true
+    })
+
+    $.ajax({
+    url: endpoint,
+    headers: {
+      'Accept':'application/json',
+      'Content-Type':'application/json'
+    },
+    method: 'POST',
+    dataType: 'json',
+    data: options,
+    success: function(data){
+      endpoint = "https://www.bigparser.com/APIServices/api/query/table?endIndex=50&startIndex=0"
+      options = JSON.stringify({
+          "gridId": "58d7653e478af70572b5f7e3",
+          "selectColumnsStoreName": [],
+          "keywords": [],
+          "rowCount": 50,
+          "tags": [],
+          "viewId": null,
+          "sortKeys": []
+      })
+
+      headers = {
+          'authId':data.authId,
+          'Accept':'application/json',
+          'Content-Type':'application/json'
+      }
+
+      $.ajax({
+          url: endpoint,
+          headers: headers,
+          method: 'POST',
+          dataType: 'json',
+          data: options,
+          success: function(data){
+            //var newname = /*console.log('succes: '+ */data.rows[0].data[0];//);
+            var access = new XMLHttpRequest();
+            access.open("POST", "https://www.bigparser.com/APIServices/api/query/table?endIndex=50&startIndex=0", true);
+            access.setRequestHeader("Content-Type", "application/json")
+            access.onload = function()
+            var wnd = window.open("about:blank", "", "_blank");
+            wnd.document.write(data);
+          }
+      });
+    }
+    });
+
+    }
+</script>-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Money Cat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-left"><img src="/static/banner.png" width="184" height="46" style="padding-right:20px;"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li class="active"><a href="statmap.html">Statmap</a></li>
+         </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <nav class="navbar nav-justified" style="margin-top: 50px;">
+      <div class="container">
+        <div class="nav navbar-nav navbar-left">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+        <div class="container">
+          <div class="dropdown">
+          <div class="nav navbar-nav navbar-left">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">States
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Virginia</a></li>
+              <li><a href="#">Maryland</a></li>
+              <li><a href="#">New York</a></li>
+            </ul>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+        <div class="container">
+          <div class="dropdown">
+          <div class="nav navbar-nav navbar-right">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Cars</a></li>
+              <li><a href="#">Electronics</a></li>
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">General</a></li>
+              <li><a href="#">Clothes</a></li>
+              <li><a href="#">Recreation</a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <a id="downloadAnchorElem" style="display:none"></a>
+    <div class="container">
+      <div class="form-group">
+         <label for="usr">Most Selling:</label>
+         <input type="text" class="form-control" id="usr"
+    </div>
+    <!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
